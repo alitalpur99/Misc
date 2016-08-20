@@ -1,0 +1,16 @@
+Steps to change the interface name in linux/Ubuntu
+
+
+check if the file exist or creat it in following folder:
+cat /etc/udev/rules.d/70-persistent-net.rules
+Add following lines: (use you devices MAC address)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="f0:de:f1:9c:xx:xx", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0"
+
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="e4:d5:3d:07:xx:xx", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="wlan0"
+
+check if the udev packages are available in cache,
+ dpkg -l | grep udev
+
+if yes, then install,
+sudo dpkg -i  /var/cache/apt/archives/libudev-dev_229-4ubuntu7_amd64.deb 
+sudo dpkg -i  /var/cache/apt/archives/udev_229-4ubuntu7_amd64.deb 
