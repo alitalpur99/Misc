@@ -1,0 +1,22 @@
+HOW TO SSH TO A MININET VM:
+
+	0. open file menu -> prefs -> network -> add host-only net-> 
+	2. add ip-add 192.168.56.1,netmask255..0 and enable dhcp server 192.168.56.100
+	1. go to settings of VM, click adapter 1, host only, and click adapter 2,set it to NAT
+	2. open vm, login, check ip-address of guest, it should be 192.168..1..
+	3. on Host machine, type 'ssh -X mininet@<ip add of guest vm>'
+	4. type 'yes', and enter password 'mininet'
+	5. login should be successful
+	6. if the ssh key fail message comes do 
+		-'ssh-keygen -R hostname' or use
+		-'ssh-keygen -f "/home/ali/.ssh/known_hosts" -R <guestip> ' 
+		e.g.ali@ali:~$ ssh-keygen -f "/home/ali/.ssh/known_hosts" -R 192.168.56.101
+		
+		=====================================
+HOW TO SSH TO A MININET VM:
+
+	1. install vm
+	2. go to VBOX file menu-> Preferences-> network-> hostonlynetworks (add network) check IP add andenable dhcp
+	3. goto setting of vm, click adpater 1, add host-only adapter and adapter 2 as NAT
+	4. you will see new Vbox0 adapter in your host ifconfig output
+
