@@ -1,4 +1,4 @@
-# "This file is used to install SublimeREPL (interactive mode)"
+# "How to install SublimeREPL (interactive mode)"
 ### Video instructions on this [youtube](https://www.youtube.com/watch?v=wM2LbXCkLDI) link
 1. Install latest Sublime-text version
 2. Paste the following text in sublime-text console (use Ctrl+~) or from menu (View->show console. Note that the text is also available on https://packagecontrol.io/installation.
