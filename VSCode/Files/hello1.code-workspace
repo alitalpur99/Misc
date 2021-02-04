@@ -1,0 +1,22 @@
+// the workspace file allows idf variables exported in VS code cmd.exe
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"freertos.h": "c",
+			"*.inc": "cpp",
+			"sdkconfig.h": "c",
+			"reent.h": "c",
+			"task.h": "c"
+		},
+		"terminal.integrated.shell.windows": "cmd.exe",
+		"terminal.integrated.shellArgs.windows": [
+			"/k",
+			"C:/esp/esp-idf/export.bat"
+		]
+	}
+}
