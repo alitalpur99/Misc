@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "freertos.h": "c",
+        "*.inc": "cpp",
+        "sdkconfig.h": "c",
+        "reent.h": "c"
+    },
+    "idf.portWin": "COM3",
+    "idf.flashType": "UART",
+    "C_Cpp.errorSquiggles": "Disabled"
+}
